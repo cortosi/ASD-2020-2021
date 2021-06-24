@@ -201,11 +201,14 @@ public class Graph<G, T> {
      * @complexity O(n)
      */
     public List<Arch<G, T>> get_arches() {
+        
+        //-------!!!!IL METODO NON È CORRETTO PER GRAFI NON ORIENTATI!!!!!--------
         List<Arch<G, T>> a_list = new ArrayList<>();
         for (G k : map.keySet())
             for (int i = 0; i < map.get(k).size(); i++)
                 a_list.add(map.get(k).get(i));
         return a_list;
+        
     }
 
     /**
