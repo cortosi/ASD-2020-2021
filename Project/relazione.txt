@@ -1,0 +1,81 @@
+----- Relazione di laboratorio ASD 2020/2021 -----
+
+Come richiesto, la relazione è stata affrontata solo sugli esercizi uno e due.
+
+/////////////// ANALISI ESERCIZIO 1 ///////////////
+
+- Analisi sulla scelta del valore K
+
+Per la scelta del valore di K, si è scelto di seguire un approccio più pragmatico:
+Si è fatta una comparazione sul tempo di esecuzione, tra il Merge-sort e il binary-insertion,
+attraverso un programma che genera array con valori casuali e con dimensione da 0 ad un dato N.
+Si è notato che, eseguendo il programma, la differenza tra il tempo di esecuzione dei due algoritmi
+per valori al di sotto di 60 - 70, è quasi nulla.Al di sotto di questo valore,
+la differenza tra i due tempi di esecuzione oscilla di poco.
+
+Al di sopra di questo valore invece la differenza è netta: Il merge sort sovrasta insertion-sort.
+La complessità di merge sort infatti, sia per best, worst e average è di O(n * log(n)),
+L'insertion-sort nel suo average ha una complessità di O(n ^ 2).
+
+
+	* Il test è stato fatto su una macchina specifca. Su una macchina differente, il valore
+		potrebbe differire.
+
+- Scelte implementative
+
+	- Per la lettura del file "records.csv", si è deciso di collocare il suo filepath sotto " ..../Ex1/ ".
+
+	- Si è implementato un modulo a parte per l'implementazione dei Comparator per alcuni tipi primitivi (Char, int, double)
+		Era necessario anche per lo Unit-testing, così da non dover implementare i Comparator nel file di unit-test
+
+	- Si è assunto che ogni linea del file "records.csv" non sforasse i 100 caratteri.
+
+	- Non è possibile testare il programma su dimensioni diverse da 20Milioni (questo è una costante).
+
+	- Per far si che lo Unit-test utilizzasse entrambi gli algoritmi, si è modificata la regola di compilazione per quest'ultimo:
+		Nel codice di compilazione, per la regola "Unity", è stato definito il parametro K=5.
+
+/////////////// ANALISI ESERCIZIO 2 ///////////////
+
+- Funzionamento
+
+L'esercizio è stato implementato sulla base di due algoritmi di edit distance: 
+
+	1) Edit distance (senza programmazione dinamica)
+	2) Edit distance utilizzando la programmazione dinamica
+
+- Analisi 
+
+La differenza tra le due implementazioni riguarda sostanzialmente la velocità di esecuzione: 
+non utilizzando la programmazione dinamica, il tempo di confronto tra le parole da correggere e il dizionario
+completo è molto alto, quasi infinito: questo è dovuto alle ridondanze che si creano sui vari sottoalberi dell'esecuzione.
+Mentre, utilizzando la programmazione dinamica, si nota un notevole miglioramento sul tempo di esecuzione (nell'ordine dei secondi con file da correggere molto grandi):
+questo è dato dal fatto che la programmazione dinamica evita le ridondanze sui sottoalberi del problema.
+
+- Scelte implementative
+
+	- Per la lettura di file "correctme.txt" e "dictionary.txt", si è deciso di collocare il suo filepath sotto " ..../Ex2/ ".
+
+	- Si è assunto che il file "correctme.txt" non sforasse i 1024 caratteri e che contenesse solo una frase/parola.
+
+	- Si è assunto anche che il file "dictionary.txt" non avesse al suo interno parole più lunghe di 1024 caratteri.
+
+	- Si è eseguito un lowercase() su tutte le iniziali di ogni parole così da confrontarle meglio con l'intero dizionario
+
+/////////////// ANALISI ESERCIZIO 4 ///////////////
+
+- Funzionamento
+
+L'esercizio 4 fa uso delle librerie implementate nell'esercizio 3.
+L'applicazione crea un grafo indiretto leggendo gli archi con il relativo peso da un file.
+Il passo successivo alla creazione del grafo è quello di calcolare l'albero minimo ricoprente utilizzando
+l'algoritmo di Kruskal ed utilizzando quindi le librerie Union_find implementate nell'esercizio 3.
+
+- Scelte implementative 
+  
+   - Per la lettura del file "italian_dist_graph.csv", si è deciso di collocare il suo filepath sotto " ..../Ex4/ ".
+   
+   - Si è deciso di implementare eccezioni personalizzate per il grafo e per Union_find.
+   
+   - Si è deciso, riguardo l'output finale, di stampare solamente la somma del numero di nodi dell'albero risultante.
+   
