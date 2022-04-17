@@ -17,7 +17,7 @@ Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel 
 Il file `records.csv` che potete trovare (compresso) all'indirizzo
 
 ```
-https://datacloud.di.unito.it/index.php/s/X7qC8JSLNRtLxPC
+https://mega.nz/file/dskTnYYR#lYsIorxm7t30pEJghBUXt7JGPyqanvHgGgOpLfbTIGo
 ```
 
 contiene 20 milioni di record da ordinare.
@@ -81,7 +81,7 @@ Implementare gli unit-test degli algoritmi secondo le indicazioni suggerite nel 
 All'indirizzo
 
 ```
-https://datacloud.di.unito.it/index.php/s/gfoEndRSfwQKiHS
+https://mega.nz/file/I8dB0DqA#NcE81UGubU1PXx2bS2gQYO5Z7v8LqtjzI1UMVOL4NmM
 ```
 potete trovare i file `dictionary.txt` e `correctme.txt` (in una cartella compressa).
 
@@ -165,7 +165,7 @@ La struttura dati Grafo e l'algoritmo di Kruskal dovranno essere utilizzati con 
 Il file italian\_dist\_graph.csv che potete trovare all'indirizzo
 
 ```
-https://datacloud.di.unito.it/index.php/s/PirTJpq4JMnpH3G
+https://mega.nz/file/g9VgWBzR#lODhFBDXZGFoMiBZidw8mQEhAYNaZZXkaMGsGfakqiU
 ```
 
 contiene le distanze in metri tra varie località
